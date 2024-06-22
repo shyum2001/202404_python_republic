@@ -17,9 +17,9 @@ st.markdown('<hr style="border:0;margin:0 auto;width:80%;border-top:2px dotted b
 st.markdown('<h6 style="color:purple;text-align:center">快看看自己的BMI是否在理想範圍吧!</h6>',
             unsafe_allow_html=True)
 
-with st.form("bmi,form"):
-    height = st.slidr(":green[選擇身高(cm)]",max_value=250,min_value=100,key='height')
-    weight = st.number_input(":green[選擇體重(kg)]",max_valee= 200,min_value=30,key='weight')
+with st.form("bmi,form",border=False):
+    height = st.slidr(":green[選擇身高(cm)]",max_value=250,min_value=100)
+    weight = st.number_input(":green[選擇體重(kg)]",max_valee= 200,min_value=30)
     if st.form_submit_button("BMI計算"):
         bmi_result = round( weight / ((height/100)**2),1)
 
