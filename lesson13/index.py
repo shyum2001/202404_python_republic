@@ -19,8 +19,8 @@ st.markdown('<h6 style="color:purple;text-align:center">快看看自己的BMI是
 
 with st.form('bmi form',border=False):
     height = st.slider(":green[選擇身高(cm):]",max_value=300, min_value=100)
-    weight = st.number_input(":green[選擇體重(kg)]",max_value=200,min_value=30)   
-    txt=''
+    weight = st.number_input(":green[選擇體重(kg):]",max_value=200,min_value=30)   
+
 
     if st.form_submit_button("BMI計算"):
         bmi_result = round( weight / ((height/100) ** 2),1 )
