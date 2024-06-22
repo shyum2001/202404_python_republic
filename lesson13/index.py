@@ -26,9 +26,7 @@ with st.form('bmi form',border=False):
         bmi_result = round( weight / ((height/100) ** 2),1 )
     weight = st.number_input(":green[選擇體重(kg)]",max_value= 200,min_value=30)
     txt=""
-    if st.form_submit_button("BMI計算"):
-        st.bmi_result = round( weight / ((height/100)**2),1)
-
+    
         if bmi_result <18.5:
             txt = "體重過輕"
         elif bmi_result <24:
