@@ -18,7 +18,7 @@ st.markdown('<h6 style="color:purple;text-align:center">快看看自己的BMI是
             unsafe_allow_html=True)
 
 with st.form('bmi form',border=False):
-    height = st.slider(":green[選擇身高(cm):]",max_value=300, min_value=100)
+    height = st.number_input(":green[選擇身高(cm):]",max_value=300, min_value=100)
     weight = st.number_input(":green[選擇體重(kg)]",max_value=200,min_value=30)   
     txt=''
 
