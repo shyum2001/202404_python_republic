@@ -24,7 +24,7 @@ with st.form('bmi form',border=False):
 
     if st.form_submit_button("BMI計算"):
         bmi_result = round( weight / ((height/100) ** 2),1 )
-    weight = st.number_input(":green[選擇體重(kg)]",max_valee= 200,min_value=30)
+    weight = st.number_input(":green[選擇體重(kg)]",max_value= 200,min_value=30)
     if st.form_submit_button("BMI計算"):
         bmi_result = round( weight / ((height/100)**2),1)
 
