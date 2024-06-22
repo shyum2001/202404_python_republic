@@ -19,9 +19,25 @@ st.markdown('<h6 style="color:purple;text-align:center">快看看自己的BMI是
 
 with st.form("bmi,form"):
     height = st.slidr(":green[選擇身高(cm)]",max_value=250,min_value=100,key='height')
-    weitht = st.number_input(":green[選擇體重(kg)]",max_valee= 200,min_value=30,key='weight')
+    weight = st.number_input(":green[選擇體重(kg)]",max_valee= 200,min_value=30,key='weight')
     if st.form_submit_button("BMI計算"):
-        pass
+        bmi_result = round( weight / ((height/100)**2),1)
+
+        if bmi_result <18.5:
+            txt = "體重過輕"
+        elif bmi_result <24:
+            txt = "正常範圍"
+        elif bmi_result <27:
+            txt = "體重過重"
+        elif bmi_result <30:
+            txt = "輕度肥胖"
+        elif bmi_reult <35:
+            txt = "中度肥胖"
+        else:
+            text ="重度肥胖"
+
+        st.markdown(f'## :orange[{bmi_result}]')
+
 
 st.session_state
     
