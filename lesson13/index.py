@@ -31,7 +31,7 @@ with st.form("bmi,form"):
             txt = "體重過重"
         elif bmi_result <30:
             txt = "輕度肥胖"
-        elif bmi_reult <35:
+        elif bmi_result <35:
             txt = "中度肥胖"
         else:
             text ="重度肥胖"
