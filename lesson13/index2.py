@@ -18,8 +18,22 @@ else:
         print("Hello")
 
     with st.sidebar:
-        st.selectbox(":orange[請選擇行政區域:]",options =areas,on_change=area_change,Key='sarea')
+        st.selectbox(":orange[請選擇行政區域:]",options =areas,on_change=area_change,key='sarea')
         st.session_state
+
+        def search():
+            st.write("開始搜尋")
+
+        def area_change():
+            sarea_name = st.session_state.sarea
+            st.write(sarea_name)
+            filter(search.data)
+        
+        with st.sidebar:
+            st.selectbox(":orange[請選擇行政區域:]", options =areas,on_change=area_change,key='sarea')
+
+        st.title("台北市youbike各行政區店點資料")
+
 
 
 
