@@ -37,7 +37,7 @@ else:
             st.scatter_chart(df2,
                              x='站點名稱',
                              y='總數',
-                             color='#48D1CC',
+                             color='#f0f"',
                              size='可借')
             
             df3 = pd.DataFrame(display_data,
@@ -46,7 +46,7 @@ else:
             st.scatter_chart(df3,
                                  x='站點名稱',
                                 y='總數',
-                                color='#FFB6C1'
+                                color='ffaa00'
                                 size='可還')
 
 
