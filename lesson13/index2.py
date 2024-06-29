@@ -14,5 +14,14 @@ else:
     data = root.model_dump()
     areas: list[str] = list(set(map(lambda value: value['行政區'],data)))
 
+    def area_change():
+        print("Hello")
+
     with st.sidebar:
-        st.selectbox(":orange[請選擇行政區域:],options =areas")
+        st.selectbox(":orange[請選擇行政區域:]",options =areas,on_change=area_change,Key='sarea')
+        st.session_state
+
+
+
+
+
