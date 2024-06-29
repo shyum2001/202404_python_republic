@@ -29,6 +29,7 @@ else:
             st.dataframe(data=display_data)
 
 
-
     with st.sidebar:
         st.selectbox(":orange[請選擇行政區域:]",options=areas,on_change=area_change,key='sarea')
+
+
