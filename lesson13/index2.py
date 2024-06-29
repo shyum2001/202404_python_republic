@@ -15,5 +15,4 @@ else:
     areas: list[str] = list(set(map(lambda value: value['行政區'],data)))
 
     with st.sidebar:
-        st.selsctbox(":orange[請選擇行政區域:],options =areas")
-
+        st.selectbox(":orange[請選擇行政區域:],options =areas")
