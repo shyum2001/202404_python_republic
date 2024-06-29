@@ -16,7 +16,7 @@ else:
     areas:list[str] = list(set(map(lambda value:value['行政區'],data)))
 
     st.title("新北市youbike各行政區站點資料")
-    tableContainer = st.container(border=False)
+    tableContainer = st.container(height=500,border=False)
     
     def area_change():
         sarea_name = st.session_state.sarea
@@ -30,14 +30,6 @@ else:
             df1 = pd.DataFrame(display_data,
                                columns=['站點名稱','日期時間','地址','總數','可借','可還'])
             st.dataframe(data=df1)
-
-            df2 = pd.DataFrame(display_data,
-                               columns=['站點名稱','總數','可借'])
-            
-            st.scatter_chart(df2,
-                             x='站點名稱',
-                             y='總數',
-                             size='可借')
 
 
 
